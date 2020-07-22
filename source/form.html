@@ -29,6 +29,98 @@
         </nav>
       </div>
     </header>
+    <main>
+      <section class="profile">
+        <h1 class="profile__title">
+          Подбор программы
+        </h1>
+        <div class="profile__desc">
+          Заполните анкету, и мы подберем программу питания для вашего кота
+        </div>
+        <form class="profile__form" method="GET" action="https://echo.htmlacademy.ru">
+          <fieldset class="profile__fieldset">
+            <label class="profile__label" for="profile-name">
+              Имя:*
+              <input class="profile__input" name="name" id="profile-name" type="text"  placeholder="Барсик">
+            </label>
+            <label class="profile__label" for="profile-weight">
+              Вес (кг):*
+              <input class="profile__input" name="weight" id="profile-weight" type="number"  placeholder="7">
+            </label>
+            <label class="profile__label" for="profile-age">
+              Возраст (лет):
+              <input class="profile__input" name="age" id="profile-age" type="number"  placeholder="7">
+            </label>
+          </fieldset>
+
+          <fieldset class="profile__fieldset">
+            <label class="profile__label" for="slimming">
+              <input class="profile__radio" name='result' id="slimming"  type='radio' value='slimming' checked>
+              Похудение
+            </label>
+            <label class="profile__label" for="mass-gain">
+              <input class="profile__radio" name='result' id="mass-gain" type='radio' value='mass-gain'>
+              Набор массы
+            </label>
+            <label class="profile__label" for="advice">
+              <input class="profile__radio" name='result' id="advice" type='radio' value='advice'>
+              Не знаю (Нужен ваш совет)
+            </label>
+          </fieldset>
+
+          <fieldset class="profile__fieldset">
+            <legend>Контактные данные (владельца кота)</legend>
+            <label class="profile__label" for="profile-email">
+              E-mail:*
+              <input class="profile__input" name="email" id="profile-email" type="email"  placeholder="kuklachev@gmail.com">
+            </label>
+            <label class="profile__label" for="profile-tel">
+              Телефон:*
+              <input class="profile__input" name="tel" id="profile-tel" type="tel"  placeholder="8 (960) 900-60-90">
+            </label>
+          </fieldset>
+          <fieldset class="profile__fieldset">
+            <legend>Комментарий</legend>
+            <textarea class="profile__textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="profile__fieldset">
+            <legend>Дополнительно</legend>
+            <label class="profile__label" for="sweetener">
+              <input class="profile__checkbox" name='sweetener' id="sweetener"  type='checkbox' checked>
+              Cахарозаменитель
+            </label>
+            <label class="profile__label" for="water">
+              <input class="profile__checkbox" name='water' id="water"  type='checkbox'>
+              Питьевая вода
+            </label>
+            <label class="profile__label" for="milk">
+              <input class="profile__checkbox" name='milk' id="milk"  type='checkbox'>
+              Молоко
+            </label>
+            <label class="profile__label" for="vitamin">
+              <input class="profile__checkbox" name='vitamin' id="vitamin"  type='checkbox'>
+              Витамины
+            </label>
+          </fieldset>
+          <button type="submit">Отправить заявку</button>
+          <p class="profile__footnote">
+            * — Обязательные поля
+          </p>
+        </form>
+      </section>
+      <section class="contacts">
+        <div class="contacts__data">
+          <p class="contacts__title">
+            приглашаем к сотрудничеству дилеров!
+          </p>
+          <p class="contacts__adress">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+        </div>
+        <img class="contacts__map" src="https://via.placeholder.com/320x362" alt="Ма на карте" width="320" height="362">
+      </section>
+    </main>
     <footer class="footer">
       <a class="logo footer__logo" href="index.html" aria-label="На главную">
         <img class="logo__text" src="https://via.placeholder.com/101x18" alt="Cat energy" width="101" height="18" >
