@@ -1,1 +1,113 @@
-// Начните писать стили здесь
+// Common  style
+
+@import 'fonts.less';
+@import 'color.less';
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--basic-extra-light);
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: var(--basic-extra-light);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button-elem {
+  display: block;
+  padding: 11px 0;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @basic-white;
+  background-color: @basic-light-green;
+}
+
+.title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  color: @basic-black;
+}
+
+//commo style
+
+@import 'blocks/header.less';
+@import 'blocks/logo.less';
+@import 'blocks/main-navigation.less';
+@import 'blocks/contacts.less';
+@import 'blocks/footer.less';
+@import 'blocks/social.less';
+@import 'blocks/copyright.less';
+
+
+// index style
+
+@import 'blocks/main.less';
+@import 'blocks/title.less';
+@import 'blocks/hero.less';
+@import 'blocks/program.less';
+@import 'blocks/about.less';
+@import 'blocks/example.less';
+
+
+// Catalog style
+
+@import 'blocks/product.less';
+@import 'blocks/catalog.less';
+@import 'blocks/other-product.less';
+
+// Form style
+
+@import 'blocks/profile.less';
