@@ -38,68 +38,69 @@
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
         <form class="profile__form" method="GET" action="https://echo.htmlacademy.ru">
-          <fieldset class="profile__fieldset">
-            <label class="profile__label" for="profile-name">
+          <fieldset class="profile__fieldset fieldset-client">
+            <label class="fieldset-client__label" for="profile-name">
               Имя:*
-              <input class="profile__input" name="name" id="profile-name" type="text" placeholder="Барсик" required>
+              <input class="fieldset-client__input" name="name" id="profile-name" type="text" placeholder="Барсик" required>
             </label>
-            <label class="profile__label" for="profile-weight">
+            <label class="fieldset-client__label" for="profile-weight">
               Вес (кг):*
-              <input class="profile__input" name="weight" id="profile-weight" type="number" placeholder="7" required>
+              <input class="fieldset-client__input" name="weight" id="profile-weight" type="number" placeholder="7" required>
             </label>
-            <label class="profile__label" for="profile-age">
+            <label class="fieldset-client__label" for="profile-age">
               Возраст (лет):
-              <input class="profile__input" name="age" id="profile-age" type="number" placeholder="7">
+              <input class="fieldset-client__input" name="age" id="profile-age" type="number" placeholder="7">
             </label>
           </fieldset>
 
-          <fieldset class="profile__fieldset">
-            <input class="profile__radio" name='result' id="slimming"  type='radio' value='slimming' checked>
-            <label class="profile__label" for="slimming">
+          <fieldset class="profile__fieldset fieldset-program">
+            <input class="fieldset-program__radio" name='result' id="slimming"  type='radio' value='slimming' checked>
+            <label class="fieldset-program__label" for="slimming">
               Похудение
             </label>
-            <input class="profile__radio" name='result' id="mass-gain" type='radio' value='mass-gain'>
-            <label class="profile__label" for="mass-gain">
+            <input class="fieldset-program__radio" name='result' id="mass-gain" type='radio' value='mass-gain'>
+            <label class="fieldset-program__label" for="mass-gain">
               Набор массы
             </label>
-            <input class="profile__radio" name='result' id="advice" type='radio' value='advice'>
-            <label class="profile__label" for="advice">
+            <input class="fieldset-program__radio" name='result' id="advice" type='radio' value='advice'>
+            <label class="fieldset-program__label" for="advice">
               Не знаю (Нужен ваш совет)
             </label>
           </fieldset>
 
-          <fieldset class="profile__fieldset">
-            <legend>Контактные данные (владельца кота)</legend>
-            <label class="profile__label" for="profile-email">
+          <fieldset class="profile__fieldset fieldset-contact">
+            <legend class="fieldset-contact__caption">Контактные данные (владельца кота)</legend>
+            <label class="fieldset-contact__label" for="profile-email">
               E-mail:*
-              <input class="profile__input" name="email" id="profile-email" type="email" placeholder="kuklachev@gmail.com" required>
+              <input class="fieldset-contact__input" name="email" id="profile-email" type="email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="profile__label" for="profile-tel">
+            <label class="fieldset-contact__label" for="profile-tel">
               Телефон:*
-              <input class="profile__input" name="tel" id="profile-tel" type="tel" placeholder="8 (960) 900-60-90" required>
+              <input class="fieldset-contact__input" name="tel" id="profile-tel" type="tel" placeholder="8 (960) 900-60-90" required>
             </label>
-          </fieldset>
-          <fieldset class="profile__fieldset">
-            <legend>Комментарий</legend>
-            <textarea class="profile__textarea" name="comment" id="textarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-          <fieldset class="profile__fieldset">
-            <legend>Дополнительно</legend>
-            <input class="profile__checkbox" name='sweetener' id="sweetener" type='checkbox' checked>
-            <label class="profile__label" for="sweetener">
+          <fieldset class="profile__fieldset fieldset-textarea">
+            <legend class="fieldset-textarea__caption">Комментарий</legend>
+            <textarea class="fieldset-textarea__field" name="comment" id="textarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="profile__fieldset fieldset-optional">
+            <legend class="fieldset-optional__caption">Дополнительно</legend>
+            <input class="fieldset-optional__checkbox" name='sweetener' id="sweetener" type='checkbox' checked>
+            <label class="fieldset-optional__label" for="sweetener">
               Cахарозаменитель
             </label>
-            <input class="profile__checkbox" name='water' id="water" type='checkbox'>
-            <label class="profile__label" for="water">
+            <input class="fieldset-optional__checkbox" name='water' id="water" type='checkbox'>
+            <label class="fieldset-optional__label" for="water">
               Питьевая вода
             </label>
-            <input class="profile__checkbox" name='milk' id="milk" type='checkbox'>
-            <label class="profile__label" for="milk">
+            <input class="fieldset-optional__checkbox" name='milk' id="milk" type='checkbox'>
+            <label class="fieldset-optional__label" for="milk">
               Молоко
             </label>
-            <input class="profile__checkbox" name='vitamin' id="vitamin" type='checkbox'>
-            <label class="profile__label" for="vitamin">
+            <input class="fieldset-optional__checkbox" name='vitamin' id="vitamin" type='checkbox'>
+            <label class="fieldset-optional__label" for="vitamin">
               Витамины
             </label>
           </fieldset>
