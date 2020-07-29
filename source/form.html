@@ -38,6 +38,7 @@
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
         <form class="profile__form" method="GET" action="https://echo.htmlacademy.ru">
+
           <fieldset class="profile__fieldset fieldset-client">
             <label class="fieldset-client__label" for="profile-name">
               Имя:*
@@ -53,57 +54,61 @@
             </label>
           </fieldset>
 
-          <fieldset class="profile__fieldset fieldset-program">
-            <input class="fieldset-program__radio" name='result' id="slimming"  type='radio' value='slimming' checked>
-            <label class="fieldset-program__label" for="slimming">
+          <fieldset class="profile__fieldset fieldset-program fieldset-program--radio">
+            <input class="fieldset-program__input fieldset-program__input--radio" name='result' id="slimming"  type='radio' value='slimming' checked>
+            <label class="fieldset-program__label fieldset-program__label--radio" for="slimming">
               Похудение
             </label>
-            <input class="fieldset-program__radio" name='result' id="mass-gain" type='radio' value='mass-gain'>
-            <label class="fieldset-program__label" for="mass-gain">
+            <input class="fieldset-program__input fieldset-program__input--radio" name='result' id="mass-gain" type='radio' value='mass-gain'>
+            <label class="fieldset-program__label fieldset-program__label--radio" for="mass-gain">
               Набор массы
             </label>
-            <input class="fieldset-program__radio" name='result' id="advice" type='radio' value='advice'>
-            <label class="fieldset-program__label" for="advice">
+            <input class="fieldset-program__input fieldset-program__input--radio" name='result' id="advice" type='radio' value='advice'>
+            <label class="fieldset-program__label fieldset-program__label--radio" for="advice">
               Не знаю (Нужен ваш совет)
             </label>
           </fieldset>
 
-          <fieldset class="profile__fieldset fieldset-contact">
-            <legend class="fieldset-contact__caption">Контактные данные (владельца кота)</legend>
-            <label class="fieldset-contact__label" for="profile-email">
+          <fieldset class="profile__fieldset fieldset-client fieldset-client--contact">
+            <legend class="profile__fieldset-caption profile__fieldset-caption--contact">Контактные данные (владельца кота)</legend>
+
+            <label class="fieldset-client__label" for="profile-email">
               E-mail:*
-              <input class="fieldset-contact__input" name="email" id="profile-email" type="email" placeholder="kuklachev@gmail.com" required>
+              <input class="fieldset-client__input fieldset-client__input--email" name="email" id="profile-email" type="email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="fieldset-contact__label" for="profile-tel">
+            <label class="fieldset-client__label" for="profile-tel">
               Телефон:*
-              <input class="fieldset-contact__input" name="tel" id="profile-tel" type="tel" placeholder="8 (960) 900-60-90" required>
+              <input class="fieldset-client__input fieldset-client__input--tel" name="tel" id="profile-tel" type="tel" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
 
-          <fieldset class="profile__fieldset fieldset-textarea">
-            <legend class="fieldset-textarea__caption">Комментарий</legend>
-            <textarea class="fieldset-textarea__field" name="comment" id="textarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <fieldset class="profile__fieldset fieldset-client fieldset-client--comment">
+            <legend class="profile__fieldset-caption profile__fieldset-caption--comment">Комментарий</legend>
+
+            <textarea class="fieldset-client__input fieldset-client__input--textarea" name="comment" id="textarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота" aria-label="Введите комментарий"></textarea>
           </fieldset>
 
-          <fieldset class="profile__fieldset fieldset-optional">
-            <legend class="fieldset-optional__caption">Дополнительно</legend>
-            <input class="fieldset-optional__checkbox" name='sweetener' id="sweetener" type='checkbox' checked>
-            <label class="fieldset-optional__label" for="sweetener">
+          <fieldset class="profile__fieldset fieldset-program fieldset-client--option">
+            <legend class="profile__fieldset-caption profile__fieldset-caption--option">Дополнительно</legend>
+
+            <input class="fieldset-program__input fieldset-program__input--checkbox" name='sweetener' id="sweetener" type='checkbox' checked>
+            <label class="fieldset-program__label fieldset-program__label--checkbox" for="sweetener">
               Cахарозаменитель
             </label>
-            <input class="fieldset-optional__checkbox" name='water' id="water" type='checkbox'>
-            <label class="fieldset-optional__label" for="water">
+            <input class="fieldset-program__input fieldset-program__input--checkbox" name='water' id="water" type='checkbox'>
+            <label class="fieldset-program__label fieldset-program__label--checkbox" for="water">
               Питьевая вода
             </label>
-            <input class="fieldset-optional__checkbox" name='milk' id="milk" type='checkbox'>
-            <label class="fieldset-optional__label" for="milk">
+            <input class="fieldset-program__input fieldset-program__input--checkbox" name='milk' id="milk" type='checkbox'>
+            <label class="fieldset-program__label fieldset-program__label--checkbox" for="milk">
               Молоко
             </label>
-            <input class="fieldset-optional__checkbox" name='vitamin' id="vitamin" type='checkbox'>
-            <label class="fieldset-optional__label" for="vitamin">
+            <input class="fieldset-program__input fieldset-program__input--checkbox" name='vitamin' id="vitamin" type='checkbox'>
+            <label class="fieldset-program__label fieldset-program__label--checkbox" for="vitamin">
               Витамины
             </label>
           </fieldset>
+
           <button class="profile__form-button button-elem" type="submit">Отправить заявку</button>
           <p class="profile__footnote">
             * — Обязательные поля
