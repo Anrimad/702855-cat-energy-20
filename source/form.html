@@ -2,32 +2,32 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог продукции</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
-      <div class="header__top">
-        <a class="logo header__logo" href="index.html" aria-label="На главную">
-          <img class="logo__icon" src="https://via.placeholder.com/33x37" alt="Довольный кот" width="33" height="37">
-          <img class="logo__text" src="https://via.placeholder.com/101x18" alt="Cat energy" width="101" height="18" >
-        </a>
-        <nav class="main-navigation">
-          <button class="main-navigation__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <a class="logo header__logo" href="index.html" aria-label="На главную">
+        <img class="logo__icon" src="https://via.placeholder.com/33x37" alt="Довольный кот" width="33" height="37">
+        <img class="logo__text" src="https://via.placeholder.com/101x18" alt="Cat energy" width="101" height="18" >
+      </a>
+      <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="profile">
@@ -38,71 +38,77 @@
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
         <form class="profile__form" method="GET" action="https://echo.htmlacademy.ru">
-          <fieldset class="profile__fieldset">
-            <label class="profile__label" for="profile-name">
+
+          <fieldset class="profile__fieldset fieldset-client">
+            <label class="fieldset-client__label" for="profile-name">
               Имя:*
-              <input class="profile__input" name="name" id="profile-name" type="text" placeholder="Барсик" required>
+              <input class="fieldset-client__input" name="name" id="profile-name" type="text" placeholder="Барсик" required>
             </label>
-            <label class="profile__label" for="profile-weight">
+            <label class="fieldset-client__label" for="profile-weight">
               Вес (кг):*
-              <input class="profile__input" name="weight" id="profile-weight" type="number" placeholder="7" required>
+              <input class="fieldset-client__input" name="weight" id="profile-weight" type="number" placeholder="7" required>
             </label>
-            <label class="profile__label" for="profile-age">
+            <label class="fieldset-client__label" for="profile-age">
               Возраст (лет):
-              <input class="profile__input" name="age" id="profile-age" type="number" placeholder="7">
+              <input class="fieldset-client__input" name="age" id="profile-age" type="number" placeholder="7">
             </label>
           </fieldset>
 
-          <fieldset class="profile__fieldset">
-            <input class="profile__radio" name='result' id="slimming"  type='radio' value='slimming' checked>
-            <label class="profile__label" for="slimming">
+          <fieldset class="profile__fieldset fieldset-program fieldset-program--radio">
+            <input class="fieldset-program__input fieldset-program__input--radio" name='result' id="slimming"  type='radio' value='slimming' checked>
+            <label class="fieldset-program__label fieldset-program__label--radio" for="slimming">
               Похудение
             </label>
-            <input class="profile__radio" name='result' id="mass-gain" type='radio' value='mass-gain'>
-            <label class="profile__label" for="mass-gain">
+            <input class="fieldset-program__input fieldset-program__input--radio" name='result' id="mass-gain" type='radio' value='mass-gain'>
+            <label class="fieldset-program__label fieldset-program__label--radio" for="mass-gain">
               Набор массы
             </label>
-            <input class="profile__radio" name='result' id="advice" type='radio' value='advice'>
-            <label class="profile__label" for="advice">
+            <input class="fieldset-program__input fieldset-program__input--radio" name='result' id="advice" type='radio' value='advice'>
+            <label class="fieldset-program__label fieldset-program__label--radio" for="advice">
               Не знаю (Нужен ваш совет)
             </label>
           </fieldset>
 
-          <fieldset class="profile__fieldset">
-            <legend>Контактные данные (владельца кота)</legend>
-            <label class="profile__label" for="profile-email">
+          <fieldset class="profile__fieldset fieldset-client fieldset-client--contact">
+            <legend class="profile__fieldset-caption profile__fieldset-caption--contact">Контактные данные (владельца кота)</legend>
+
+            <label class="fieldset-client__label" for="profile-email">
               E-mail:*
-              <input class="profile__input" name="email" id="profile-email" type="email" placeholder="kuklachev@gmail.com" required>
+              <input class="fieldset-client__input fieldset-client__input--email" name="email" id="profile-email" type="email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="profile__label" for="profile-tel">
+            <label class="fieldset-client__label" for="profile-tel">
               Телефон:*
-              <input class="profile__input" name="tel" id="profile-tel" type="tel" placeholder="8 (960) 900-60-90" required>
+              <input class="fieldset-client__input fieldset-client__input--tel" name="tel" id="profile-tel" type="tel" placeholder="8 (960) 900-60-90" required>
             </label>
-          </fieldset>
-          <fieldset class="profile__fieldset">
-            <legend>Комментарий</legend>
-            <textarea class="profile__textarea" name="comment" id="textarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-          <fieldset class="profile__fieldset">
-            <legend>Дополнительно</legend>
-            <input class="profile__checkbox" name='sweetener' id="sweetener" type='checkbox' checked>
-            <label class="profile__label" for="sweetener">
+          <fieldset class="profile__fieldset fieldset-client fieldset-client--comment">
+            <legend class="profile__fieldset-caption profile__fieldset-caption--comment">Комментарий</legend>
+
+            <textarea class="fieldset-client__input fieldset-client__input--textarea" name="comment" id="textarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота" aria-label="Введите комментарий"></textarea>
+          </fieldset>
+
+          <fieldset class="profile__fieldset fieldset-program fieldset-client--option">
+            <legend class="profile__fieldset-caption profile__fieldset-caption--option">Дополнительно</legend>
+
+            <input class="fieldset-program__input fieldset-program__input--checkbox" name='sweetener' id="sweetener" type='checkbox' checked>
+            <label class="fieldset-program__label fieldset-program__label--checkbox" for="sweetener">
               Cахарозаменитель
             </label>
-            <input class="profile__checkbox" name='water' id="water" type='checkbox'>
-            <label class="profile__label" for="water">
+            <input class="fieldset-program__input fieldset-program__input--checkbox" name='water' id="water" type='checkbox'>
+            <label class="fieldset-program__label fieldset-program__label--checkbox" for="water">
               Питьевая вода
             </label>
-            <input class="profile__checkbox" name='milk' id="milk" type='checkbox'>
-            <label class="profile__label" for="milk">
+            <input class="fieldset-program__input fieldset-program__input--checkbox" name='milk' id="milk" type='checkbox'>
+            <label class="fieldset-program__label fieldset-program__label--checkbox" for="milk">
               Молоко
             </label>
-            <input class="profile__checkbox" name='vitamin' id="vitamin" type='checkbox'>
-            <label class="profile__label" for="vitamin">
+            <input class="fieldset-program__input fieldset-program__input--checkbox" name='vitamin' id="vitamin" type='checkbox'>
+            <label class="fieldset-program__label fieldset-program__label--checkbox" for="vitamin">
               Витамины
             </label>
           </fieldset>
+
           <button class="profile__form-button button-elem" type="submit">Отправить заявку</button>
           <p class="profile__footnote">
             * — Обязательные поля
