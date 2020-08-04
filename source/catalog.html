@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог продукции</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <header class="header">
-      <a class="logo header__logo" href="index.html" aria-label="На главную">
-        <img class="logo__icon" src="https://via.placeholder.com/33x37" alt="Довольный кот" width="33" height="37">
-        <img class="logo__text" src="https://via.placeholder.com/101x18" alt="Cat energy" width="101" height="18" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог продукции</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper">
+      <a class="header__logo" href="index.html" aria-label="На главную">
+        <img class="header__logo-icon" src="img/logo-mobile.svg" alt="Довольный кот" width="190" height="37">
       </a>
       <nav class="main-navigation">
         <button class="main-navigation__toggle" type="button">
@@ -21,22 +23,25 @@
             <a class="main-navigation__link" href="index.html">Главная</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Каталог продукции</a>
+            <a class="main-navigation__link main-navigation__link--active" href="#">Каталог продукции</a>
           </li>
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
-    </header>
-    <main class="main">
-      <section class="catalog">
+    </div>
+  </header>
+  <main class="main">
+    <section class="catalog">
+      <div class="container">
         <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="product">
           <li class="product__item">
             <div class="product__content">
               <a class="product__link-pic" href="#" aria-label="Перейти на страницу продукта">
-                <img class="product__pic" src="https://via.placeholder.com/68x86" alt="Cat Energy PRO 500 г курица" width="68" height="86">
+                <img class="product__pic" src="img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г курица"
+                  width="68" height="86">
               </a>
               <div class="product__info">
                 <a class="product__link-name" href="#">
@@ -57,13 +62,14 @@
                   </tr>
                 </table>
               </div>
+              <a href="#" class="product__button button-elem">Заказать</a>
             </div>
-            <a href="#" class="product__button button-elem">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__content">
               <a class="product__link-pic" href="#" aria-label="Перейти на страницу продукта">
-                <img class="product__pic" src="https://via.placeholder.com/84x100" alt="Cat Energy PRO 1000 г курица" width="84" height="100">
+                <img class="product__pic" src="img/chicken-big-mobile@1x.jpg" alt="Cat Energy PRO 1000 г курица"
+                  width="84" height="100">
               </a>
               <div class="product__info">
                 <a class="product__link-name" href="#">
@@ -84,13 +90,14 @@
                   </tr>
                 </table>
               </div>
+              <a href="#" class="product__button button-elem">Заказать</a>
             </div>
-            <a href="#" class="product__button button-elem">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__content">
               <a class="product__link-pic" href="#" aria-label="Перейти на страницу продукта">
-                <img class="product__pic" src="https://via.placeholder.com/68x86" alt="Cat Energy PRO 500 г рыба" width="68" height="86">
+                <img class="product__pic" src="img/fish-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г рыба" width="68"
+                  height="86">
               </a>
               <div class="product__info">
                 <a class="product__link-name" href="#">
@@ -111,13 +118,14 @@
                   </tr>
                 </table>
               </div>
+              <a href="#" class="product__button button-elem">Заказать</a>
             </div>
-            <a href="#" class="product__button button-elem">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__content">
               <a class="product__link-pic" href="#" aria-label="Перейти на страницу продукта">
-                <img class="product__pic" src="https://via.placeholder.com/68x86" alt="Cat Energy PRO 1000 г рыба" width="84" height="100">
+                <img class="product__pic" src="img/fish-big-mobile@1x.jpg" alt="Cat Energy PRO 1000 г рыба" width="84"
+                  height="100">
               </a>
               <div class="product__info">
                 <a class="product__link-name" href="#">
@@ -138,13 +146,14 @@
                   </tr>
                 </table>
               </div>
+              <a href="#" class="product__button button-elem">Заказать</a>
             </div>
-            <a href="#" class="product__button button-elem">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__content">
               <a class="product__link-pic" href="#" aria-label="Перейти на страницу продукта">
-                <img class="product__pic" src="https://via.placeholder.com/68x86" alt="Cat Energy PRO 500 г гречка" width="68" height="86">
+                <img class="product__pic" src="img/buckwheat-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г гречка"
+                  width="68" height="86">
               </a>
               <div class="product__info">
                 <a class="product__link-name" href="#">
@@ -165,13 +174,14 @@
                   </tr>
                 </table>
               </div>
+              <a href="#" class="product__button button-elem">Заказать</a>
             </div>
-            <a href="#" class="product__button button-elem">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__content">
               <a class="product__link-pic" href="#" aria-label="Перейти на страницу продукта">
-                <img class="product__pic" src="https://via.placeholder.com/68x86" alt="Cat Energy PRO 1000 г гречка" width="84" height="100">
+                <img class="product__pic" src="img/buckwheat-big-mobile@1x.jpg" alt="Cat Energy PRO 1000 г гречка"
+                  width="84" height="100">
               </a>
               <div class="product__info">
                 <a class="product__link-name" href="#">
@@ -192,13 +202,14 @@
                   </tr>
                 </table>
               </div>
+              <a href="#" class="product__button button-elem">Заказать</a>
             </div>
-            <a href="#" class="product__button button-elem">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__content">
               <a class="product__link-pic" href="#" aria-label="Перейти на страницу продукта">
-                <img class="product__pic" src="https://via.placeholder.com/68x86" alt="Cat Energy PRO 500 г рис" width="68" height="86">
+                <img class="product__pic" src="img/rice-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г рис" width="68"
+                  height="86">
               </a>
               <div class="product__info">
                 <a class="product__link-name" href="#">
@@ -219,22 +230,26 @@
                   </tr>
                 </table>
               </div>
+              <a href="#" class="product__button button-elem">Заказать</a>
             </div>
-            <a href="#" class="product__button button-elem">Заказать</a>
           </li>
         </ul>
-        <p class="catalog__still-title">
-          Показать еще 100500 товаров
-        </p>
-        <p class="catalog__still-desc">
-          На самом деле вкусов гораздо больше!
-        </p>
-        <a href="#" class="catalog__button button-elem">Показать все</a>
-      </section>
-      <section class="other-product">
-        <h2 class="other-product__title">
-          Дополнительные товары
-        </h2>
+        <div class="catalog__still-content">
+          <p class="catalog__still-title">
+            Показать еще 100500 товаров
+          </p>
+          <p class="catalog__still-desc">
+            На самом деле вкусов гораздо больше!
+          </p>
+          <a href="#" class="catalog__button button-elem">Показать все</a>
+        </div>
+      </div>
+    </section>
+    <section class="other-product">
+      <h2 class="other-product__title">
+        Дополнительные товары
+      </h2>
+      <div class="container">
         <ul class="other-product__list">
           <li class="other-product__item">
             <h3 class="other-product__name">Сахарозаменитель</h3>
@@ -282,41 +297,59 @@
             Закажите все и получите чехол для кота в подарок!
           </div>
         </div>
-      </section>
-      <section class="contacts">
-        <h2 class="visually-hidden">Как добраться</h2>
-        <div class="contacts__data">
-          <p class="contacts__title">
-            приглашаем к сотрудничеству дилеров!
-          </p>
-          <address class="contacts__adress">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </address>
-        </div>
-        <img class="contacts__map" src="https://via.placeholder.com/320x362" alt="Ма на карте" width="320" height="362">
-      </section>
-    </main>
-    <footer class="footer">
-      <a class="logo footer__logo" href="index.html" aria-label="На главную">
-        <img class="logo__text" src="https://via.placeholder.com/101x18" alt="Cat energy" width="101" height="18" >
-      </a>
-      <ul class="footer__social social">
-        <li class="social__elem">
-          <a class="social__link" href="#" aria-label="Мы в контакте"></a>
-        </li>
-        <li class="social__elem">
-          <a class="social__link" href="#" aria-label="Мы в инстаграм"></a>
-        </li>
-        <li class="social__elem">
-          <a class="social__link" href="#" aria-label="Мы в фейсбук"></a>
-        </li>
-      </ul>
-      <div class="footer__copyright copyright">
-        <p class="copyright__text">HTML Academy</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="На страницу интенсива «Профессиональный HTML и CSS, уровень 2»">
-          <img class="copyright__logo" src="https://via.placeholder.com/27x34" alt="HTML Academy" width="27" height="34">
-        </a>
       </div>
-    </footer>
-  </body>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <h2 class="visually-hidden">Как добраться</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__data">
+            <p class="contacts__title">
+              приглашаем к сотрудничеству дилеров!
+            </p>
+            <address class="contacts__adress">
+              ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+            </address>
+          </div>
+        </div>
+      </div>
+      <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Ма на карте" width="320" height="362">
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <a class="footer__logo" href="index.html" aria-label="На главную">
+          <img class="footer__logo-text" src="img/logo-footer.svg" alt="Cat energy" width="101" height="18">
+        </a>
+        <ul class="footer__social social">
+          <li class="social__elem">
+            <a class="social__link" href="#" aria-label="Мы в контакте">
+              <img class="social__icon" src="https://via.placeholder.com/101x18" width="30" height="22">
+            </a>
+          </li>
+          <li class="social__elem">
+            <a class="social__link" href="#" aria-label="Мы в инстаграм">
+              <img class="social__icon" src="https://via.placeholder.com/101x18" width="23" height="23">
+            </a>
+          </li>
+          <li class="social__elem">
+            <a class="social__link" href="#" aria-label="Мы в фейсбук">
+              <img class="social__icon" src="https://via.placeholder.com/101x18" width="28" height="33">
+            </a>
+          </li>
+        </ul>
+        <div class="footer__copyright copyright">
+          <p class="copyright__text">HTML Academy</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="На страницу интенсива «Профессиональный HTML и CSS, уровень 2»">
+            <img class="copyright__logo" src="https://via.placeholder.com/27x34" alt="HTML Academy" width="27"
+              height="34">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
