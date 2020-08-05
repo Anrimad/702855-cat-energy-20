@@ -10,7 +10,7 @@
 
 .product__item {
   position: relative;
-  padding: 24px 20px 33px;
+  padding: 24px 0 33px;
   border-bottom: 1px solid @basic-light;
 
   &:first-child {
@@ -18,6 +18,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    display: flex;
     width: calc((100% - 60px) / 2);
     margin-bottom: 60px;
     padding: 0;
@@ -29,7 +30,7 @@
     }
   }
 
-  @media (min-width: @desctop-width) {
+  @media (min-width: @desktop-width) {
     width: calc((100% - 80px) / 4);
   }
 }
@@ -41,6 +42,7 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    width: 100%;
     padding: 0 36px 40px;
     background-color: @basic-extra-light;
   }
@@ -129,4 +131,92 @@
   @media (min-width: @tablet-width) {
     margin-top: 33px;
   }
+}
+
+.more-product {
+  padding-top: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 73px;
+  }
+}
+
+.more-product__content {
+  position: relative;
+  width: 100%;
+  padding-top: 79px;
+  border-bottom: 1px solid @neutral-light-gray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%);
+    background: url("../img/icon-plus.svg") no-repeat center center;
+
+    @media (min-width: @tablet-width) {
+      top: 52px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 161px 36px 40px;
+    border: 1px solid @neutral-light-gray;
+  }
+}
+
+.more-product__caption {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.more-product__desc {
+  margin: 0;
+  margin-top: 8px;
+  font-family: "Arial", "Tahoma", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: @basic-charcoal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.more-product__caption,
+.more-product__desc {
+  @media (min-width: @tablet-width) {
+    width: 167px;
+    margin: 0 auto;
+
+    &.more-product__desc {
+      margin-top: 23px;
+    }
+  }
+}
+
+
+.more-product__button {
+  margin-top: 21px;
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 0;
+  color: @basic-charcoal;
+  background-color: @basic-extra-light;
 }
