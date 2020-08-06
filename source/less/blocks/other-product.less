@@ -1,9 +1,35 @@
 .other-product__title {
-  margin: 0;
-  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  margin: 28px 0 35px 0;
+  padding-left: 20px;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+
+  &::after {
+    content: "";
+    margin-top: 8px;
+    margin-left: 22px;
+    flex-grow: 1;
+    height: 2px;
+    background-color: @basic-light-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      width: 30px;
+      margin-top: 8px;
+      margin-right: 37px;
+      height: 2px;
+      background-color: @basic-light-green;
+    }
+  }
 }
 
 .other-product__list {
@@ -13,12 +39,23 @@
 
 .other-product__item {
   padding: 13px 0 19px 0;
-  border-top: 1px solid @basic-gray;
   border-bottom: 1px solid @basic-gray;
+
+  &:first-child {
+    border-top: 1px solid @basic-gray;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 36px 28px;
+    border: 1px solid @basic-gray;
+    border-top: 0;
+  }
 }
 
 .other-product__table {
+  width: 100%;
   margin-top: 13px;
+  border-collapse: collapse;
 }
 
 .other-product__name {
@@ -37,14 +74,47 @@
   color: @basic-charcoal;
 }
 
+.other-product__data-info {
+  width: 50%;
+  padding: 0;
+
+  &:last-child {
+    text-align: right;
+  }
+}
+
 .other-product__button {
   margin-top: 15px;
 }
 
 .other-product__present {
+  position: relative;
   margin-top: 39px;
-  background: url("../../img/gift-photo-mobile@1x.jpg") no-repeat center;
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
   background-size: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    width: 78px;
+    height: 80px;
+    transform: translateX(-50%);
+    background: url("../img/icon-gift.svg") no-repeat center;
+    background-size: contain;
+
+    @media (min-width: @tablet-width) {
+      left: 78px;
+      transform: translate(0);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 71px 124px 69px 78px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: cover;
+  }
 }
 
 .other-product__present-text {
@@ -56,4 +126,10 @@
   line-height: 20px;
   text-align: center;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+    padding: 0;
+    text-align: left;
+  }
 }

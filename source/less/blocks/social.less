@@ -1,6 +1,27 @@
 .social {
   .reset-list();
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
   padding: 20px 0;
   border-top: 1px solid @neutral-light-gray;
   border-bottom: 1px solid @neutral-light-gray;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+.social__elem {
+  margin-right: 33px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 27px;
+  }
 }

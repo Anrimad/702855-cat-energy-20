@@ -1,11 +1,70 @@
 .product {
   .reset-list();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .product__item {
-  padding: 11px 0 33px 0;
-  border-top: 1px solid @basic-light;
+  position: relative;
+  padding: 24px 0 33px;
   border-bottom: 1px solid @basic-light;
+
+  &:first-child {
+    border-top: 1px solid @basic-light;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: calc((100% - 60px) / 2);
+    margin-bottom: 60px;
+    padding: 0;
+    padding-top: 73px;
+    border: none;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc((100% - 80px) / 4);
+  }
+}
+
+.product__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 100%;
+    padding: 0 36px 40px;
+    background-color: @basic-extra-light;
+  }
+}
+
+.product__link-pic {
+  display: flex;
+  justify-content: center;
+  flex-basis: 50%;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 200px;
+    top: -73px;
+    margin-bottom: -73px;
+  }
+}
+
+.product__info {
+  flex-basis: 50%;
 }
 
 .product__link-name {
@@ -14,47 +73,146 @@
 
 .product__name {
   width: 80px;
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
   color: @basic-nero;
+
+  @media (min-width: @tablet-width) {
+    width: 130px;
+    margin: 34px auto 0;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.product__table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 21px;
+  }
 }
 
 .product__data-info {
+  width: 50%;
+  padding: 0;
+  padding-bottom: 6px;
   font-family: "Arial", "Tahoma", sans-serif;
   font-size: 12px;
   line-height: 16px;
   color: @basic-charcoal;
+
+  &:last-child {
+    text-align: right;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 9px;
+    padding-top: 5px;
+    border-bottom: 1px solid @basic-gray;
+  }
 }
 
 .product__button {
+  display: block;
+  width: 100%;
   margin-top: 13px;
   padding: 20px 0;
   font-size: 16px;
   line-height: 0;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 33px;
+  }
 }
 
-.catalog__still-title {
-  margin-top: 26px;
-  padding-top: 53px;
+.more-product {
+  padding-top: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 73px;
+  }
+}
+
+.more-product__content {
+  position: relative;
+  width: 100%;
+  padding-top: 79px;
+  border-bottom: 1px solid @neutral-light-gray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%);
+    background: url("../img/icon-plus.svg") no-repeat center center;
+
+    @media (min-width: @tablet-width) {
+      top: 52px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 161px 36px 40px;
+    border: 1px solid @neutral-light-gray;
+  }
+}
+
+.more-product__caption {
+  margin: 0;
   font-size: 16px;
+  font-weight: 400;
   line-height: 29px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
-.catalog__still-desc {
+.more-product__desc {
+  margin: 0;
   margin-top: 8px;
   font-family: "Arial", "Tahoma", sans-serif;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
   color: @basic-charcoal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
-.catalog__button {
+.more-product__caption,
+.more-product__desc {
+  @media (min-width: @tablet-width) {
+    width: 167px;
+    margin: 0 auto;
+
+    &.more-product__desc {
+      margin-top: 23px;
+    }
+  }
+}
+
+
+.more-product__button {
   margin-top: 21px;
   padding: 20px 0;
   font-size: 16px;

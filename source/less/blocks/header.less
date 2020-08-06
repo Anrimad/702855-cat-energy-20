@@ -1,0 +1,59 @@
+.header {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 55px;
+
+    &--background::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50vw;
+      height: 696px;
+      background: #65a93c url("../img/index-background-desktop@1x.jpg") no-repeat right top;
+    }
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 37px;
+  padding-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    width: 768px;
+    min-height: 51px;
+    margin: 0 auto;
+    padding: 25px 30px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    padding-left: 30px;
+    padding-right: 0;
+  }
+}
+
+.header__logo-text {
+  margin-left: 57px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    margin-left: 12px;
+  }
+}
