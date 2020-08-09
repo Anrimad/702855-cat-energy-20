@@ -32,9 +32,20 @@
   }
 }
 
+.other-product__content {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .other-product__list {
   margin-top: 35px;
   .reset-list();
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+  }
 }
 
 .other-product__item {
@@ -46,9 +57,17 @@
   }
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 25px 36px 28px;
     border: 1px solid @basic-gray;
     border-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 0;
+    border-width: 1px 0;
   }
 }
 
@@ -56,6 +75,12 @@
   width: 100%;
   margin-top: 13px;
   border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-top: 0;
+    margin-left: auto;
+  }
 }
 
 .other-product__name {
@@ -65,6 +90,11 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @basic-nero;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .other-product__data {
@@ -72,6 +102,11 @@
   font-size: 14px;
   line-height: 14px;
   color: @basic-charcoal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .other-product__data-info {
@@ -81,10 +116,47 @@
   &:last-child {
     text-align: right;
   }
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    min-width: 42px;
+
+    &:first-child {
+      width: 133px;
+      text-align: right;
+    }
+
+    &:last-child {
+      padding-left: 51px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      padding-left: 0;
+      width: 163px;
+    }
+  }
 }
 
 .other-product__button {
   margin-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-top: 23px;
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    margin-top: 0;
+    margin-left: 40px;
+  }
 }
 
 .other-product__present {
@@ -115,6 +187,14 @@
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: cover;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-top: 0;
+    margin-left: 80px;
+    padding: 55px 43px 42px 41px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
 }
 
 .other-product__present-text {
@@ -131,5 +211,10 @@
     margin-right: 0;
     padding: 0;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    align-self: flex-end;
   }
 }

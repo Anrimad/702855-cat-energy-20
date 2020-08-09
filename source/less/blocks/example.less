@@ -1,47 +1,142 @@
 .example {
   padding-top: 27px;
   background-color: @neutral-background;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+  }
+}
+
+.example__content {
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 76px;
+    padding: 70px 0 67px;
+  }
+}
+
+.exapmle__content-info {
+  @media (min-width: @desktop-width) {
+    width: 436px;
+  }
 }
 
 .example__desc {
   margin: 0;
-  margin-top: 30px;
   font-family: "Arial", "Tahoma", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @basic-charcoal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
-.example__content {
+.example__content-result {
   margin-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    margin-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .example__list {
   .reset-list();
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .example__item {
+  width: 124px;
+  padding: 15px 0;
   font-size: 24px;
   line-height: 25px;
   text-align: center;
   color: @basic-black;
+  border: 1px solid @basic-gray;
+  border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    font-size: 30px;
+    line-height: 37px;
+
+    &:last-child {
+      margin-left: 42px;
+    }
+  }
 }
 
-.example__price {
+.example__cost {
   margin: 0;
   margin-top: 25px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    margin-top: 12px;
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+
+    span {
+      display: block;
+      margin-top: 9px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-top: 55px;
+    text-align-last: left;
+
+    span {
+      display: inline-block;
+      margin-left: 63px;
+    }
+  }
 }
 
 .example__slider {
   margin-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 690px;
+  }
 }
 
 .example__slider-list {
   .reset-list();
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .example__slider-button {
