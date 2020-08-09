@@ -4,6 +4,11 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .profile__desc {
@@ -13,10 +18,37 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 325px;
+    margin-top: 54px;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .profile__form {
   margin-top: 39px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 35px 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.profile__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .profile__fieldset {
@@ -25,19 +57,62 @@
   border: none;
 }
 
+.fieldset-client--user-data {
+  @media (min-width: @desktop-width) {
+    flex-basis: 569px;
+  }
+}
+
 .fieldset-program--radio {
-  margin-top: 24px;
-  padding-top: 20px;
-  padding-bottom: 22px;
+  margin: 24px -20px 0 -20px;
+  padding: 20px 20px 22px;
+  border: 1px solid @neutral-light-gray;
+
+  @media (min-width: @tablet-width) {
+    margin: 72px 0 0 0;
+    padding: 25px 0 25px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 569px;
+    margin: 0;
+  }
+}
+
+.fieldset-program__label--radio {
+  padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .fieldset-client--contact {
   margin-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 71px;
+  }
+}
+
+.fieldset-client__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+
+    .fieldset-client__label {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .fieldset-client--comment,
-.fieldset-client--option {
+.fieldset-program--option {
   margin-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+  }
 }
 
 .profile__fieldset-caption {
@@ -58,6 +133,26 @@
     width: 141px;
     margin-bottom: 34px;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+
+    &--contact {
+      width: 516px;
+      margin-bottom: 76px;
+    }
+
+    &--comment {
+      width: 182px;
+      margin-bottom: 76px;
+    }
+
+    &--option {
+      width: 211px;
+      margin-bottom: 57px;
+    }
+  }
 }
 
 .fieldset-client__label,
@@ -68,11 +163,23 @@
   line-height: 18px;
   color: @basic-charcoal;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.fieldset-client__input {
+  flex-grow: 1;
+  margin-left: 14px;
 }
 
 .fieldset-client__label,
 .fieldset-program__label {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 13px;
 
   &:last-child {
@@ -80,16 +187,80 @@
   }
 }
 
+.fieldset-client__label {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.fieldset-client__input--textarea {
+  width: 100%;
+  margin-left: 0;
+  padding: 13px 12px 0 35px;
+
+  resize: none;
+}
+
 .fieldset-program__label {
   color: @basic-nero;
 }
 
+.fieldset-program__label--checkbox {
+  padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    width: 221px;
+    margin-right: 123px;
+    margin-bottom: 32px;
+    padding-left: 59px;
+
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 104px;
+
+    &:nth-of-type(even) {
+      margin-right: 104px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.profile__form-order {
+  margin-top: 34px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .profile__form-button {
   width: 100%;
-  margin-top: 34px;
   font-family: inherit;
   text-transform: uppercase;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    padding: 17px 65px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 17px 205px;
+  }
 }
 
 .profile__footnote {
@@ -100,4 +271,10 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-left: 61px;
+    font-size: 16px;
+  }
 }
