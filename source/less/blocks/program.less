@@ -25,7 +25,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 30px;
-    padding: 77px 279px 53px 52px;
+    padding: 77px 62px 53px 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -40,7 +40,7 @@
 .program__caption {
   position: relative;
   margin: 0;
-  padding-left: 91px;
+  padding-left: 69px;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
@@ -87,10 +87,70 @@
     padding-left: 0;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 200px;
+      height: 200px;
+      transform: translate(0);
+    }
+
+    &--slim {
+      &::after {
+        right: 30px;
+        left: auto;
+        width: 140px;
+        height: 192px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 44px;
+        right: -32px;
+        left: auto;
+        width: 268px;
+        height: 112px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 214px;
+    padding-left: 162px;
+
+    &::before {
+      top: 50%;
+      right: auto;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        top: 50%;
+        right: auto;
+        left: 15px;
+        transform: translateY(-50%);
+        width: 70px;
+        height: 97px;
+        margin-top: -6px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 50%;
+        right: auto;
+        left: -19px;
+        transform: translateY(-50%);
+        width: 134px;
+        height: 56px;
+      }
+    }
   }
 }
 
@@ -105,14 +165,20 @@
   border-bottom: 1px solid @neutral-light-gray;
 
   @media (min-width: @tablet-width) {
+    width: 377px;
     margin-top: 24px;
     padding-bottom: 0;
     font-size: 16px;
     line-height: 24px;
     border-bottom: none;
+
+    &--pro {
+      width: 342px;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    width: auto;
     margin-top: 73px;
   }
 }
@@ -136,6 +202,10 @@
     height: 12px;
     transform: translateY(-50%);
     background: url("../img/icon-right-arrow-long.svg") no-repeat center;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

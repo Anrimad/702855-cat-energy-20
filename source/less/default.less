@@ -75,6 +75,15 @@ input[type="checkbox"].visually-hidden {
   text-align: center;
   color: @basic-white;
   background-color: @basic-light-green;
+
+  &:hover,
+  &:active {
+    background-color: @basic-dark-green;
+  }
+
+  &:active {
+    color: fade(@basic-white, 30%);
+  }
 }
 
 .title {
