@@ -4,6 +4,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 43px;
+    background-color: @basic-white;
   }
 }
 
@@ -65,10 +66,12 @@
 }
 
 .example__item {
+  position: relative;
   width: 124px;
   padding: 15px 0;
   font-size: 24px;
   line-height: 25px;
+  text-transform: uppercase;
   text-align: center;
   color: @basic-black;
   border: 1px solid @basic-gray;
@@ -85,9 +88,29 @@
   }
 }
 
+.example__item-desc {
+  display: inline-block;
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 87px;
+  padding: 0 10px;
+  font-family: "Arial", "Tahoma", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+  color: @basic-charcoal;
+  background-color: @neutral-background;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+  }
+}
+
 .example__cost {
   margin: 0;
-  margin-top: 25px;
+  margin-top: 34px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -123,7 +146,10 @@
   margin-top: 42px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 100%;
+    margin-top: 65px;
+    padding-top: 185px;
   }
 
   @media (min-width: @desktop-width) {
@@ -133,13 +159,86 @@
 
 .example__slider-list {
   .reset-list();
+  position: relative;
+  display: flex;
+  justify-content: center;
 
-  @media (min-width: @desktop-width) {
-    display: flex;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
   }
 }
 
-.example__slider-button {
-  margin-top: 23px;
+.example__slider-item {
+  @media (min-width: @tablet-width) {
+    overflow: hidden;
+    flex-basis: 50%;
+  }
+}
+
+.example__slider-pic {
+  object-fit: cover;
+
+  &--fat {
+    width: 311px;
+    height: 232px;
+  }
+
+  &--slim {
+    width: 251px;
+    height: 240px;
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 354px;
+    position: static;
+
+    &--fat {
+      height: 620px;
+    }
+
+    &--slim {
+      height: 620px;
+      display: block;
+    }
+  }
+}
+
+.example__slider-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
   padding-bottom: 25px;
+  text-align: center;
+}
+
+.example__slider-button {
+  width: 70px;
+  height: 40px;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+}
+
+.example__slider-line {
+  width: 84px;
+  height: 14px;
+  margin: 0 2px;
+  padding: 4px 6px;
+  background-color: @basic-white;
+  border-radius: 6px;
+  border: 1px solid @basic-gray;
+}
+
+.example__slider-progress {
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-radius: 6px;
+  background-color: @basic-light-green;
 }
