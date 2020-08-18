@@ -9,13 +9,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 0;
+    margin: 0;
+    border-bottom: none;
   }
 }
 
 .about__list {
   .reset-list();
-  margin-top: 38px;
+  margin-top: 32px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -72,6 +73,7 @@
   @media (min-width: @desktop-width) {
     flex-basis: 250px;
     margin-right: 70px;
+    margin-bottom: 0;
 
     &:nth-child(odd) {
       margin-right: 70px;
