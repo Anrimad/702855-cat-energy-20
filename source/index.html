@@ -10,26 +10,28 @@
 
 <body>
   <header class="header header--background">
-    <div class="header__wrapper">
-      <a class="header__logo">
-        <img class="header__logo-icon" src="img/logo-mobile.svg" alt="Довольный кот" width="190" height="37">
-      </a>
-      <nav class="main-navigation main-navigation--opened main-navigation--nojs">
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-navigation__list main-navigation__list--white">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--active" href="#">Главная</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="header__logo">
+          <img class="header__logo-icon" src="img/logo-mobile.svg" alt="Довольный кот" width="190" height="37">
+        </a>
+        <nav class="main-navigation main-navigation--opened main-navigation--nojs">
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-navigation__list main-navigation__list--white">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--active" href="#">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <main class="main">
@@ -137,26 +139,29 @@
             </div>
           </div>
           <div class="example__slider">
-            <ul class="example__slider-list">
-              <li class="example__slider-item">
-                <!-- <img class="example__slider-pic example__slider-pic--fat" src="img/before-mobile@1x.png"
-                  alt="Кот пухляш" width="311" height="232"> -->
-                <img class="example__slider-pic example__slider-pic--fat" src="img/before-tablet@1x.png"
-                  alt="Кот пухляш" width="690" height="517">
-              </li>
-              <li class="example__slider-item">
-                <!-- <img class="example__slider-pic example__slider-pic--slim" src="img/after-mobile@1x.png"
-                  alt="Кот стройняш" width="251" height="240"> -->
-                <img class="example__slider-pic example__slider-pic--slim" src="img/after-tablet@1x.png"
-                  alt="Кот стройняш" width="690" height="517">
-              </li>
-            </ul>
-            <div class="example__slider-control">
-              <button class="example__slider-button" type="button">Было</button>
-              <div class="example__slider-line">
-                <span class="example__slider-progress"></span>
+            <div class="example__slider-content">
+              <ul class="example__slider-list">
+                <li class="example__slider-item">
+                  <!-- <img class="example__slider-pic example__slider-pic--fat" src="img/before-mobile@1x.png"
+                    alt="Кот пухляш" width="311" height="232"> -->
+                  <img class="example__slider-pic example__slider-pic--fat" src="img/before-tablet@1x.png"
+                    alt="Кот пухляш" width="690" height="517">
+                </li>
+                <li class="example__slider-item">
+                  <!-- <img class="example__slider-pic example__slider-pic--slim" src="img/after-mobile@1x.png"
+                    alt="Кот стройняш" width="251" height="240"> -->
+                  <img class="example__slider-pic example__slider-pic--slim" src="img/after-tablet@1x.png"
+                    alt="Кот стройняш" width="690" height="517">
+                </li>
+              </ul>
+              <div class="example__slider-control">
+                <button class="example__slider-button" type="button">Было</button>
+                <div class="example__slider-line">
+                  <span class="example__slider-progress"></span>
+                  <span class="example__slider-toogle"></span>
+                </div>
+                <button class="example__slider-button" type="button">Стало</button>
               </div>
-              <button class="example__slider-button" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -188,7 +193,6 @@
         <ul class="footer__social social">
           <li class="social__elem">
             <a class="social__link" href="#" aria-label="Мы в контакте">
-              <?xml version="1.0" encoding="utf-8"?>
               <svg class="social__icon social__icon--vk" width="30" height="16" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 22 12" xml:space="preserve">
                 <path
@@ -198,7 +202,6 @@
           </li>
           <li class="social__elem">
             <a class="social__link" href="#" aria-label="Мы в инстаграм">
-              <?xml version="1.0" encoding="utf-8"?>
               <svg class="social__icon social__icon--fb" width="23" height="23" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16.1 16">
                 <path class="st0"
@@ -211,7 +214,6 @@
           </li>
           <li class="social__elem">
             <a class="social__link" href="#" aria-label="Мы в фейсбук">
-              <?xml version="1.0" encoding="utf-8"?>
               <svg class="social__icon social__icon--gram" width="28" height="33" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 10 19">
                 <path
