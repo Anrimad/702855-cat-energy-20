@@ -26,8 +26,9 @@
 
   .main-navigation--closed .main-navigation__toggle {
     position: absolute;
-    top: 23px;
-    right: 20px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
     display: block;
     width: 24px;
     height: 18px;
@@ -51,8 +52,8 @@
 
   .main-navigation--opened .main-navigation__toggle {
     position: absolute;
-    top: 23px;
-    right: 20px;
+    top: 26px;
+    right: 0;
     display: block;
     width: 24px;
     height: 18px;
@@ -93,10 +94,10 @@
 
 .main-navigation__list {
   .reset-list();
-  margin-top: 15px;
+  margin: 15px -20px 0;
 
   @media (min-width: @tablet-width) {
-    margin-top: 0;
+    margin: 0;
     display: flex;
   }
 
@@ -133,6 +134,7 @@
 
   &:last-child {
     margin-right: 0;
+    border-bottom: 0;
   }
 }
 

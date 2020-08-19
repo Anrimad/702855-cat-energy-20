@@ -1,3 +1,18 @@
+.copyright {
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    .copyright__logo path {
+      fill: @basic-light-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .copyright__text {
   margin: 0;
   font-family: "Arial", "Tahoma", sans-serif;
@@ -7,5 +22,18 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 22px;
+  }
+}
+
+.copyright__link {
+  display: inline-block;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+
+  path {
+    fill: @basic-dimgray;
   }
 }

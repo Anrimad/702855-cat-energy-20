@@ -22,21 +22,23 @@
   @media (min-width: @tablet-width) {
     width: 325px;
     margin-top: 54px;
-    padding-left: 40px;
+    margin-left: 40px;
     font-size: 20px;
     line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    margin-left: 0;
   }
 }
 
 .profile__form {
+  position: relative;
   margin-top: 39px;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
-    padding: 0 35px 0 40px;
+    padding: 0 36px 0 42px;
   }
 
   @media (min-width: @desktop-width) {
@@ -57,71 +59,34 @@
   border: none;
 }
 
-.fieldset-client--user-data {
-  @media (min-width: @desktop-width) {
-    flex-basis: 569px;
-  }
-}
-
-.fieldset-program--radio {
-  margin: 24px -20px 0 -20px;
-  padding: 20px 20px 22px;
-  border: 1px solid @neutral-light-gray;
-
-  @media (min-width: @tablet-width) {
-    margin: 72px 0 0 0;
-    padding: 25px 0 25px 28px;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-basis: 569px;
-    margin: 0;
-  }
-}
-
-.fieldset-program__label--radio {
-  padding-left: 45px;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 60px;
-  }
-}
-
-.fieldset-client--contact {
-  margin-top: 26px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 71px;
-  }
-}
-
-.fieldset-client__wrapper {
-  @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-
-    .fieldset-client__label {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.fieldset-client--comment,
-.fieldset-program--option {
-  margin-top: 27px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 65px;
-  }
-}
-
 .profile__fieldset-caption {
+  position: relative;
+  display: inline-block;
+  box-sizing: content-box;
+  padding: 0;
+  padding-right: 15px;
   font-size: 24px;
   line-height: 26px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 100vw;
+    height: 2px;
+    margin-top: 4px;
+    transform: translateY(-50%);
+    background-color: @basic-light-green;
+  }
 
   &--contact {
     width: 187px;
     margin-bottom: 32px;
+
+    &::after {
+      margin-top: -8px;
+    }
   }
 
   &--comment {
@@ -135,12 +100,33 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding-right: 40px;
     font-size: 36px;
     line-height: 36px;
+    background-color: @basic-white;
+
+    &::after {
+      left: calc(315px - 100vw / 2);
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -42px;
+      width: 42px;
+      height: 100%;
+      background-color: @basic-white;
+    }
 
     &--contact {
       width: 516px;
       margin-bottom: 76px;
+
+      &::after {
+        margin-top: 4px;
+      }
     }
 
     &--comment {
@@ -153,86 +139,10 @@
       margin-bottom: 57px;
     }
   }
-}
-
-.fieldset-client__label,
-.fieldset-client__input,
-.fieldset-program__label {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 18px;
-  color: @basic-charcoal;
-  text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-.fieldset-client__input {
-  flex-grow: 1;
-  margin-left: 14px;
-}
-
-.fieldset-client__label,
-.fieldset-program__label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 13px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.fieldset-client__label {
-  @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
-  }
 
   @media (min-width: @desktop-width) {
-    width: 569px;
-  }
-}
-
-.fieldset-client__input--textarea {
-  width: 100%;
-  margin-left: 0;
-  padding: 13px 12px 0 35px;
-
-  resize: none;
-}
-
-.fieldset-program__label {
-  color: @basic-nero;
-}
-
-.fieldset-program__label--checkbox {
-  padding-left: 45px;
-
-  @media (min-width: @tablet-width) {
-    display: inline-block;
-    width: 221px;
-    margin-right: 123px;
-    margin-bottom: 32px;
-    padding-left: 59px;
-
-    &:nth-of-type(even) {
-      margin-right: 0;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 104px;
-
-    &:nth-of-type(even) {
-      margin-right: 104px;
-
-      &:last-child {
-        margin-right: 0;
-      }
+    &::after {
+      left: calc(610px - 100vw / 2);
     }
   }
 }
