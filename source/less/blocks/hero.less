@@ -37,6 +37,12 @@
     background-size: cover;
   }
 
+  @media (min-resolution: 2dppx) {
+    &::after {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin-left: 80px;
     margin-bottom: 0;
@@ -108,38 +114,23 @@
 }
 
 .hero__product-pic {
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
+  width: 280px;
+  height: 270px;
 
   @media (min-width: @tablet-width) {
     top: 20px;
-
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
+    width: 709px;
+    height: 609px;
+    object-fit: contain;
   }
 
   @media (min-width: @desktop-width) {
     top: 0;
     right: 0;
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-      transform: translate(0);
-    }
+    display: block;
+    width: 552px;
+    height: 449px;
+    transform: translate(0);
   }
 }
 

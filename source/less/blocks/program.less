@@ -79,6 +79,7 @@
     &::after {
       left: -10px;
       width: 67px;
+      height: 28px;
       background: url("../img/icon-cat-pro.svg") no-repeat center top;
     }
   }
@@ -197,11 +198,19 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 8px;
     width: 24px;
-    height: 12px;
+    height: 10px;
     transform: translateY(-50%);
     background: url("../img/icon-right-arrow-long.svg") no-repeat center;
+  }
+
+  &:hover {
+    &::after {
+      right: 0;
+      width: 32px;
+      background: url("../img/icon-right-arrow-verylong.svg") no-repeat center;
+    }
   }
 
   &:active {

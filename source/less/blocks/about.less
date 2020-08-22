@@ -132,6 +132,32 @@
     }
   }
 
+  @media (min-resolution: 2dppx) {
+    &--useful {
+      &::before {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
+    }
+
+    &--type {
+      &::before {
+        background-image: url("../img/advantage-powder@2x.png");
+      }
+    }
+
+    &--food {
+      &::before {
+        background-image: url("../img/advantage-dining@2x.png");
+      }
+    }
+
+    &--time {
+      &::before {
+        background-image: url("../img/advantage-clock@2x.png");
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 151px;
     padding-left: 0;

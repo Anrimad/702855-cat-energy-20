@@ -280,7 +280,8 @@
   outline: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-bottom-style: solid;
   }
 
@@ -333,13 +334,16 @@
   display: none;
   width: 34px;
   height: 34px;
+  padding: 0;
   border: 13px solid @basic-white;
   border-radius: 50%;
   background-color: @basic-light-green;
+  outline: none;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
   }
 
