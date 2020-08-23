@@ -26,6 +26,3 @@ function initMap() {
     zoom: 17
   });
 }
-
-
-
