@@ -37,8 +37,14 @@
     background-size: cover;
   }
 
+  @media (min-resolution: 2dppx) {
+    &::after {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    margin-left: 80px;
+    margin-left: 87px;
     margin-bottom: 0;
     background: transparent;
 
@@ -48,6 +54,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 80px;
     padding-top: 114px;
   }
 }
@@ -108,38 +115,23 @@
 }
 
 .hero__product-pic {
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
+  width: 280px;
+  height: 270px;
 
   @media (min-width: @tablet-width) {
     top: 20px;
-
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
+    width: 709px;
+    height: 609px;
+    object-fit: contain;
   }
 
   @media (min-width: @desktop-width) {
     top: 0;
     right: 0;
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-      transform: translate(0);
-    }
+    display: block;
+    width: 552px;
+    height: 499px;
+    transform: translate(0);
   }
 }
 
@@ -150,14 +142,13 @@
     display: inline-block;
     margin-top: 49px;
     margin-bottom: 526px;
-    margin-left: 80px;
-    padding: 14px 26px;
+    margin-left: 83px;
+    padding: 18px 26px;
     font-size: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 53px;
-    margin-bottom: 185px;
+    margin: 53px 0 185px 80px;
     padding: 18px 26px;
   }
 }

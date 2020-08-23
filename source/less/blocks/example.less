@@ -3,7 +3,7 @@
   background-color: @neutral-background;
 
   @media (min-width: @tablet-width) {
-    padding-top: 43px;
+    padding-top: 5px;
     background-color: @basic-white;
   }
 
@@ -14,7 +14,7 @@
 }
 
 .example__content {
-  margin-top: 30px;
+  margin-top: 35px;
 
   @media (min-width: @tablet-width) {
     margin-top: 63px;
@@ -22,12 +22,12 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
-    top: -194px;
+    top: -205px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 76px;
-    margin-bottom: -194px;
+    margin-top: 85px;
+    margin-bottom: -205px;
   }
 }
 
@@ -64,6 +64,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+    margin-top: 69px;
   }
 }
 
@@ -116,14 +117,14 @@
   background-color: @neutral-background;
 
   @media (min-width: @tablet-width) {
+    width: 147px;
+    bottom: -9px;
+    font-size: 14px;
+    line-height: 14px;
     background-color: @basic-white;
   }
 
   @media (min-width: @desktop-width) {
-    width: 147px;
-    bottom: -6px;
-    font-size: 14px;
-    line-height: 14px;
     background-color: @basic-extra-light;
   }
 }
@@ -168,7 +169,7 @@
   @media (min-width: @tablet-width) {
     position: relative;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 65px;
     padding-top: 194px;
   }
 
@@ -203,7 +204,7 @@
 
   @media (min-width: @desktop-width) {
     &::after {
-      left: 344px;
+      left: 395px;
     }
   }
 }
@@ -256,12 +257,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 26px;
   padding-bottom: 25px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
   }
 }
 
@@ -280,7 +285,8 @@
   outline: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-bottom-style: solid;
   }
 
@@ -292,13 +298,17 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 15px;
+  }
 }
 
 .example__slider-line {
   position: relative;
   width: 84px;
   height: 14px;
-  margin: 0 2px;
+  margin: 0 5px;
   padding: 4px 6px;
   background-color: @basic-white;
   border-radius: 6px;
@@ -310,6 +320,10 @@
     margin: 0 14px;
     padding: 0;
     background-color: @basic-gray;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -333,13 +347,16 @@
   display: none;
   width: 34px;
   height: 34px;
+  padding: 0;
   border: 13px solid @basic-white;
   border-radius: 50%;
   background-color: @basic-light-green;
+  outline: none;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
   }
 
