@@ -21,8 +21,18 @@ let mainMap = document.querySelector('.map-js');
 mainMap.classList.add('contacts__map--nojs');
 
 function initMap() {
-  map = new google.maps.Map(document.querySelector('.map-js'), {
-    center: { lat: 59.938816, lng: 30.323063 },
-    zoom: 17
+  let coordinates = { lat: 59.938816, lng: 30.323063 },
+    markerIcon = 'img/map-pin.png',
+    map = new google.maps.Map(document.querySelector('.map-js'), {
+      center: coordinates,
+      zoom: 17,
+      scrollwheel: false
+    });
+
+  marker = new google.maps.Marker({
+    position: coordinates,
+    map: map,
+    icon: markerIcon,
+    animation: google.maps.Animation.BOUNCE
   });
 }
