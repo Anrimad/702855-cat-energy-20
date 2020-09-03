@@ -1,3 +1,8 @@
+.other-product {
+  position: relative;
+  z-index: 2;
+}
+
 .other-product__title {
   position: relative;
   display: inline-block;
@@ -20,6 +25,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 80px;
     padding-left: 37px;
     padding-right: 36px;
     font-size: 36px;
@@ -34,6 +41,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 30px;
     padding-left: 0;
 
     &::before {
@@ -164,7 +172,7 @@
 }
 
 .other-product__button {
-  margin-top: 15px;
+  margin-top: 12px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -193,10 +201,10 @@
   &::after {
     content: "";
     position: absolute;
-    top: 58px;
+    top: 65px;
     left: 50%;
-    width: 78px;
-    height: 80px;
+    width: 56px;
+    height: 60px;
     transform: translateX(-50%);
     background: url("../img/icon-gift.svg") no-repeat center;
     background-size: contain;
@@ -208,6 +216,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 69px;
     padding: 71px 124px 69px 78px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: cover;
