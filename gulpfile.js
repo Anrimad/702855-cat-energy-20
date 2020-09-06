@@ -8,9 +8,12 @@ const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
+const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify');;
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+
 
 // clean
 const clean = () => {
@@ -25,7 +28,6 @@ const copy = () => {
     "source/img/**",
     "source/js/**",
     "source/*.ico",
-    "source/*.html",
   ], {
     base: "source"
   })
@@ -38,6 +40,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -53,10 +56,21 @@ exports.styles = styles;
 // html
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("./build"))
     .pipe(sync.stream());
 }
 exports.html = html;
+
+
+// js
+const jsmin = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename("main.min.js"))
+    .pipe(gulp.dest("./build/js"))
+}
+exports.jsmin = jsmin;
 
 // image
 const images = () => {
@@ -109,7 +123,7 @@ const watcher = () => {
 
 // build
 const build = gulp.series(
-  clean, copy, styles, sprite
+  clean, copy, styles, sprite, html, jsmin
 );
 
 exports.build = build;
