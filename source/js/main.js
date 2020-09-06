@@ -17,11 +17,11 @@ navToggle.addEventListener('click', function () {
 
 
 // Map
-let mainMap = document.querySelector('.map-js');
+var mainMap = document.querySelector('.map-js');
 mainMap.classList.add('contacts__map--nojs');
 
 function initMap() {
-  let coordinates = { lat: 59.938816, lng: 30.323063 },
+  var coordinates = { lat: 59.938816, lng: 30.323063 },
     markerIcon = 'img/map-pin.png',
     map = new google.maps.Map(document.querySelector('.map-js'), {
       center: coordinates,
